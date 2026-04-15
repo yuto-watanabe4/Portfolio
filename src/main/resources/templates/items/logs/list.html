@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>入出庫履歴 - Restaurant Management</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    .in { color: blue; }  /* 入庫は青 */
+    .out { color: red; }   /* 出庫・廃棄は赤 */
+  </style>
+</head>
+<body>
+<h1>入出庫履歴一覧</h1>
+<a th:href="@{/items}">在庫一覧に戻る</a>
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>日時</th>
+    <th>食材ID</th>
+    <th>種別</th>
+    <th>数量</th>
+    <th>操作ユーザー</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="log : ${logs}">
+    <td th:text="${#temporals.format(log.occurredAt, 'yyyy/MM/dd HH:mm:ss')}">2026/04/09</td>
+    <td th:text="${log.itemId}">1</td>
+    <td th:text="${log.transactionType}"
+        th:class="${log.transactionType == '入庫' ? 'in' : 'out'}">入庫</td>
+    <td th:text="${log.quantity}">+10</td>
+    <td th:text="${log.userId}">1</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>発注依頼 - Restaurant Management</title>
+
+</head>
+<body>
+<h2>発注依頼</h2>
+<form th:action="@{/orders/place}" method="post">
+  <input type="hidden" name="itemId" th:value="${item.itemId}">
+  <p>食材：<span th:text="${item.itemName}"></span></p>
+  <p>仕入先：<span th:text="${item.vender?.venderName}"></span></p>
+
+  <div>
+    <label>発注数量：</label>
+    <input type="number" name="quantity" th:value="${item.reorderPoint * 2}" required>
+  </div>
+
+  <button type="submit">この内容で発注を確定する</button>
+</form>
+</body>
+</html>

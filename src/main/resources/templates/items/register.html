@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>食材登録</title>
+</head>
+<body>
+    <h1>新規食材登録</h1>
+
+    <form th:action="@{/items/register}" th:object="${item}" method="post">
+        <div>
+            <label>食材名：</label>
+            <input type="text" th:field="*{name}" required>
+        </div>
+        <div>
+            <label>在庫数：</label>
+            <input type="number" th:field="*{quantity}">
+        </div>
+        <div>
+            <label>単位：</label>
+            <input type="text" th:field="*{unit}">
+        </div>
+        <div>
+            <label>発注点（この数を下回ると警告）</label>
+            <input type="number" th:field="*{reorderPoint}">
+        </div>
+    </form>
+    <div>
+        <label>カテゴリ：</label>
+        <select th:field="*{category}">
+            <option value="">-- カテゴリを選択 --</option>
+            <option th:each="cat : ${categories}"
+                    th:value="${cat.categoryId}"
+                    th:text="${cat.categoryName}">
+            </option>
+        </select>
+    </div>
+
+    <button type="submit">登録する</button>
+
+    <br>
+    <a th:href="@{/items}">一覧に戻る</a>
+
+
+</body>
+</html>

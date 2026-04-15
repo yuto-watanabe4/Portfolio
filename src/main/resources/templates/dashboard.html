@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>店舗管理ダッシュボード</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    .alert-box { background-color: #ffebee; border: 1px solid #c62828; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background-color: #f4f4f4; }
+    .btn-order { background-color: #ff9800; color: white; padding: 5px 10px; text-decoration: none; border-radius: 3px; }
+    .btn-stock { background-color: #4caf50; color: white; padding: 5px 10px; text-decoration: none; border-radius: 3px; margin-right: 5px; }
+    .urgent { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+<h1>店舗管理ダッシュボード</h1>
+
+<div class="alert-box" th:if="${!lowStockItems.isEmpty()}">
+  <h2>⚠️ 在庫不足のアラート</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>食材名</th>
+      <th>現在庫</th>
+      <th>発注点</th>
+      <th>仕入先</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${lowStockItems}">
+      <td th:text="${item.itemName}">食材名</td>
+      <td th:text="${item.quantity}" class="urgent">0</td>
+      <td th:text="${item.reorderPoint}">10</td>
+      <td th:text="${item.vender != null ? item.vender.venderName : '未設定'}">仕入先</td>
+      <td>
+        <a th:href="@{/items/stock/{id}(id=${item.itemId})}" class="btn-stock">入庫</a>
+        <a th:href="@{/orders/new/{id}(id=${item.itemId})}" class="btn-order">発注を依頼する</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div th:if="${lowStockItems.isEmpty()}">
+  <p>✅ 現在、在庫不足の食材はありません。</p>
+</div>
+
+<hr>
+
+<nav>
+  <a th:href="@{/items}">📦 在庫一覧</a> |
+  <a th:href="@{/categories}">📁 カテゴリ管理</a> |
+  <a th:href="@{/suppliers}">🚛 仕入先管理</a> |
+  <a th:href="@{/orders}">📜 発注履歴一覧</a> </nav>
+</body>
+</html>

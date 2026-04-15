@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>在庫一覧</title>
+    <style>
+        .alert { color: red; font-size: bold; } /*アラートのスタイル*/
+        table { border-collapse: collapse; width: 88%; }
+        th, td {border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>在庫一覧画面</h1>
+
+    <div th:if="${not #lists.isEmpty(lowStockItems)}" class="alert">
+        在庫が不足している食材があります！発注の確認してください
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>カテゴリ</th>
+            <th>食材名</th>
+            <th>在庫数</th>
+            <th>単位</th>
+            <th>発注点</th>
+            <th>状態</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:eath="item : ${items}">
+                <td th:text="${item.id}">1</td>
+                <td th:text="${item.category != null ? item.category.categoryName : '未設定'}">野菜</td>
+                <td th:text="${item.name}">トマト</td>
+                <td th:text="${item.quantity}">5</td>
+                <td th:text="${item.unit}">kg</td>
+                <td th:text="${item.reorderPoint}">10</td>
+                <td>
+                    <span th:if="${item.quantity < item.reorderPoint}" Class="alert">在庫不足</span>
+                    <span th:unless="${item.quantity < item.reorderPoint}">良好</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a th:href="@{/items/new}">＋ 新しい食材を登録する</a>
+    <a th:href="@{/logs}">📜 入出庫履歴を見る</a>
+</body>
+</html>

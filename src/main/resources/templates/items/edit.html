@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>食材編集</title>
+</head>
+<body>
+<h1>食材情報の編集</h1>
+
+<form th:action="@{/items/update}" th:object="${item}" method="post">
+    <input type="hidden" th:field="*{id}">
+
+    <div>
+        <label>食材名：</label>
+        <input type="text" th:field="*{name}" required>
+    </div>
+    <div>
+        <label>在庫数：</label>
+        <input type="number" th:field="*{quantity}">
+    </div>
+    <div>
+        <label>単位：</label>
+        <input type="text" th:field="*{unit}">
+    </div>
+    <div>
+        <label>発注点：</label>
+        <input type="number" th:field="*{reorderPoint}">
+    </div>
+
+    <button type="submit">更新する</button>
+</form>
+<br>
+<a th:href="@{/items}">戻る</a>
+</body>
+</html>
