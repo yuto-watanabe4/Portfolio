@@ -14,5 +14,6 @@ public class InventoryApplication {
     public static void main(String[] args) {
         SpringApplication.run(InventoryApplication.class, args);
     }
-
+    //http://localhost:8080/login 起動用
+    //password123 admin_user
     }

@@ -5,33 +5,31 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "stock_log")
+@Table(name = "stock_logs")
 @Data
 public class StockLog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long LogId;
+    private Integer logId;
 
-    // どの食材の履歴か（Itemとの紐付け）
-    private Long itemId;
+    @Column(nullable = false)
+    private Integer itemId; // どの食材か
 
-    // 誰が操作したか（本来はUserと紐付けますが、一旦数値か名前で）
-    private Long userId;
+    @Column(nullable = false)
+    private Integer userId; // 誰が操作したか
 
-    // 入庫、出庫、廃棄などの種別
-    private String transactionType;
+    @Column(nullable = false)
+    private String transactionType; // 入庫, 出庫, 廃棄, 棚卸調整
 
-    // 動かした数量
-    private Integer quantity;
+    @Column(nullable = false)
+    private Integer quantity; // 動かした数量
 
-    // いつ起きたか
-    private LocalDateTime occurredAt;
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
 
-    // 保存する直前に、現在時刻を自動セットする
     @PrePersist
     protected void onCreate() {
-        occurredAt = LocalDateTime.now();
+        this.createdAt = LocalDateTime.now();
     }
 }
-

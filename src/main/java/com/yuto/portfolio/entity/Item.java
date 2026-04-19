@@ -1,10 +1,6 @@
 package com.yuto.portfolio.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Entity
@@ -14,31 +10,22 @@ public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @NotBlank(message = "食材名は必須です") //空文字禁止
-    @Size(max = 255)
-    //@Column(nullable = false)
-    private String itemName;
-
-    @Min(value = 0, message = "在庫数は0以上で入力してください") // マイナス禁止
-    @NotNull(message = "現在の在庫数を入力してください")
-    //@Column(nullable = false)
-    private Integer quantity;
+    private Integer itemId;
 
     @Column(nullable = false)
-    private String unit;
+    private String itemName; //食材名
 
-    @Min(value = 0, message = "発注点は0以上で入力してください")
-    @NotNull(message = "発注点を入力してください")
-    //@Column(nullable = false)
-    private Integer reorderPoint;
+    @Column(nullable = false)
+    private Integer reorderPoint = 0; //発注点
 
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
+    @Column(nullable = false)
+    private Integer price = 0; //価格
 
-    @ManyToOne
-    @JoinColumn(name = "vender_id")
-    private Vender vender;
+    @Column(nullable = false)
+    private Integer quantity = 0; //現在在庫数
+
+    // categoryId と venderId は、後で @ManyToOne に書き換えますが
+    // 一旦 Integer で定義しておくとスムーズに起動できます
+    private Integer categoryId;
+    private Integer venderId;
 }
