@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>発注勧告</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<body>
+<form th:action="@{/orders/alert/select}" method="post">
+  <table class="table align-middle">
+    <thead>
+    <tr>
+      <th>選択</th>
+      <th>食材名</th>
+      <th>現在庫</th>
+      <th>発注点</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${alertItems}">
+      <td>
+        <input type="checkbox" name="itemIds" th:value="${item.itemId}" class="form-check-input">
+      </td>
+      <td th:text="${item.itemName}"></td>
+      <td th:text="${item.quantity}" class="text-danger fw-bold"></td>
+      <td th:text="${item.reorderPoint}"></td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-between mt-4">
+    <a th:href="@{/orders}" class="btn btn-secondary">戻る</a>
+    <button type="submit" class="btn btn-danger">発注勧告食材選択へ</button>
+  </div>
+</form>
+</body>
+</html>

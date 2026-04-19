@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>発注食材選択 | 飲食店管理システム</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container py-5">
+  <h2 class="mb-4">発注食材選択</h2>
+  <form th:action="@{/orders/confirm}" method="post">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>選択</th>
+            <th>食材名</th>
+            <th>単価</th>
+            <th>現在庫</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="item : ${items}">
+            <td>
+              <input type="checkbox" name="itemIds" th:value="${item.itemId}" class="form-check-input">
+            </td>
+            <td th:text="${item.itemName}"></td>
+            <td th:text="${item.price} + '円'"></td>
+            <td th:text="${item.quantity}"></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="text-end">
+      <a th:href="@{/orders}" class="btn btn-secondary me-2">キャンセル</a>
+      <button type="submit" class="btn btn-primary">発注食材確認画面へ</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
