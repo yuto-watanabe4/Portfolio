@@ -14,16 +14,16 @@ public class StockLog {
     private Integer logId;
 
     @Column(nullable = false)
-    private Integer itemId; // どの食材か
+    private Integer itemId;
 
     @Column(nullable = false)
-    private Integer userId; // 誰が操作したか
+    private Integer userId;
 
     @Column(nullable = false)
-    private String transactionType; // 入庫, 出庫, 廃棄, 棚卸調整
+    private String transactionType;
 
     @Column(nullable = false)
-    private Integer quantity; // 動かした数量
+    private Integer quantity;
 
     @Column(updatable = false)
     private LocalDateTime createdAt;

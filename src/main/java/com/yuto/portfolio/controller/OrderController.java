@@ -21,7 +21,7 @@ public class OrderController {
     private final ItemService itemService;
     private final VendorService vendorService;
 
-    // 1. 発注メニュー画面 (各HTMLの /orders へのリンク先)
+    // 1. 発注メニュー画面
     @GetMapping
     public String orderMenu() {
 
@@ -46,7 +46,7 @@ public class OrderController {
     @PostMapping({"/confirm", "/alert/select"})
     public String confirmOrder(@RequestParam(value = "itemIds", required = false) List<Integer> itemIds, Model model) {
         if (itemIds == null || itemIds.isEmpty()) {
-            return "redirect:/orders/select"; // 選択なしなら戻す
+            return "redirect:/orders/select";
         }
         model.addAttribute("selectedItems", itemService.getItemsByIds(itemIds));
         model.addAttribute("vendors", vendorService.getAllVendors());

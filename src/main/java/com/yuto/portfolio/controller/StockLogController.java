@@ -19,7 +19,6 @@ public class StockLogController {
     @GetMapping
     public String listLogs(Model model) {
         model.addAttribute("logs", stockLogService.getAllLogs());
-        // IDから名前を引けるように、食材リストも渡しておくとHTMLで便利です
         model.addAttribute("items", itemService.getAllItems());
         return "logs/list";
     }

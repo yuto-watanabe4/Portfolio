@@ -26,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         // 2. UserDetailsオブジェクトを生成して返す
         // ※ここで user.getUsername() が Entityの username フィールドを正しく返しているか確認
         return new org.springframework.security.core.userdetails.User(
-                user.getUsername(), // ここが Entity のフィールド名と一致している必要があります
+                user.getUsername(),
                 user.getPassword(),
                 Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()))
         );

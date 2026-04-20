@@ -19,7 +19,7 @@ public class User {
     //権限
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Role role; // ADMIN, USER などのENUM
+    private Role role; // ADMIN, USER などをENUM
 
     //ユーザー名
     @NotBlank(message = "ユーザー名は必須です")
@@ -37,7 +37,7 @@ public class User {
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    //アカウント作成日を自動でセットします
+    //アカウント作成日を自動でセット
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();

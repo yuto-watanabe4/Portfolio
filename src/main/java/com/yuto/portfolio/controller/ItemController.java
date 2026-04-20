@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/items") // URLの始まりを /items に統一
+@RequestMapping("/items")
 @RequiredArgsConstructor
 public class ItemController {
 
@@ -19,7 +19,6 @@ public class ItemController {
     //一覧表示
     @GetMapping
     public String listItems(Model model) {
-        //Serviceから前食材を取得してmodelに積む
         model.addAttribute("items", itemService.getAllItems());
         //templates/items/list.htmlを表示
         return "items/list";

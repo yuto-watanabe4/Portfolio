@@ -17,7 +17,6 @@ public class VendorService {
 
     private final VendorRepository vendorRepository;
 
-    // 仕入先リスト取得用
     public List<Vendor> getAllVendors() {
         return vendorRepository.findAll();
     }

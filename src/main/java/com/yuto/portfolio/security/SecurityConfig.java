@@ -31,7 +31,6 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        // 【テスト用】ハッシュ化せず、入力された文字をそのまま比較する
         return org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance();
     }
 }

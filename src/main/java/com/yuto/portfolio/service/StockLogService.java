@@ -19,12 +19,12 @@ public class StockLogService {
     private final StockLogRepository stockLogRepository;
     private final ItemRepository itemRepository;
 
-    // ログをすべて取得（リポジトリで定義した「新しい順」を使用）
+    // ログをすべて取得
     public List<StockLog> getAllLogs() {
         return stockLogRepository.findAllByOrderByCreatedAtDesc();
     }
 
-    // ログを記録する汎用メソッド
+    // ログを記録するメソッド
     public void addLog(Integer itemId, Integer userId, String type, Integer qty) {
         StockLog log = new StockLog();
         log.setItemId(itemId);

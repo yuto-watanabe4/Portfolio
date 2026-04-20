@@ -64,7 +64,7 @@ public class ItemService {
             item.setQuantity(item.getQuantity() + qty);
             itemRepository.save(item);
 
-            // ★ここでログを保存！ (userIdは一旦仮で 1 にしています)
+            //ログを保存
             stockLogService.addLog(itemId, 1, "入庫（発注）", qty);
         }
     }

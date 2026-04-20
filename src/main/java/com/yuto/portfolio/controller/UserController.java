@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/users")
 @RequiredArgsConstructor
-@PreAuthorize("hasRole('ADMIN')") //クラス内の全メソッドをADMIN限定にする
+@PreAuthorize("hasRole('ADMIN')") //クラス内の全メソッドをADMINに限定
 public class UserController {
 
     private final UserService userService;

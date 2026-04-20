@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "items") //itemsテーブル
+@Table(name = "items")
 @Data
 public class Item {
 
@@ -24,8 +24,4 @@ public class Item {
     @Column(nullable = false)
     private Integer quantity = 0; //現在在庫数
 
-    // categoryId と venderId は、後で @ManyToOne に書き換えますが
-    // 一旦 Integer で定義しておくとスムーズに起動できます
-    private Integer categoryId;
-    private Integer venderId;
 }
