@@ -15,7 +15,7 @@
 
 ## テーブル定義
 
-![テーブル図](./テーブル図.png)
+[./テーブル図.png](https://github.com/yuto-watanabe4/Portfolio/blob/master/%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E5%9B%B3.drawio))
 
 [ER図](https://www.figma.com/board/52fVjLTGEO5QGQb3V3r5AI/ER%E5%9B%B3?node-id=0-1&p=f&t=Fnyfg6R08D1EbpkT-0)
 
