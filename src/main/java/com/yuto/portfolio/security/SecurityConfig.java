@@ -16,11 +16,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login").permitAll() //ログイン画面は見れるようにする
+                        .requestMatchers("/login").permitAll() //ログイン画面は見られるようにする
                         .anyRequest().authenticated()
                 )
                 .formLogin(login -> login
-                        .loginPage("/login")               // このHTML（/login）を表示する
+                        .loginPage("/login")  // このHTML（/login）を表示する
                         .defaultSuccessUrl("/items", true) // 成功したら一覧へ
                         .permitAll()
                 )
