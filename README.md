@@ -15,7 +15,7 @@
 
 ## テーブル定義
 
-[テーブル定義.xlsx]([[attachment:1d03c729-9dec-4ee1-9bbc-4894d86620a6:テーブル定義.pdf](https://excel.cloud.microsoft/open/onedrive/?docId=DEC30727D18C83EE%21s69e25f1873844b718c059c511d34b524&driveId=DEC30727D18C83EE)](https://docs.google.com/spreadsheets/d/1zMogyVaby7-5FTFHlIHuLT-HbgcEsQKhiBVql1WN2y4/edit?gid=0#gid=0))
+![ER図](./テーブル図.png)
 
 [ER図](https://www.figma.com/board/52fVjLTGEO5QGQb3V3r5AI/ER%E5%9B%B3?node-id=0-1&p=f&t=Fnyfg6R08D1EbpkT-0)
 
