@@ -44,6 +44,10 @@ Intellij Idea
 
 Mavin
 
+#### テスト
+
+Junit SpringBootTest
+
 #### DB
 
 PostgleSQL
