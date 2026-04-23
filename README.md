@@ -15,10 +15,10 @@
 
 [ER図](https://www.figma.com/board/52fVjLTGEO5QGQb3V3r5AI/ER%E5%9B%B3?node-id=0-1&p=f&t=Fnyfg6R08D1EbpkT-0)
 
-`起動URL：http://localhost:8080/login`
+起動URL：http://localhost:8080/login
 
-ログインID　`admin_user`
-パスワード　`password123`
+ログインID　admin_user
+パスワード　password123
 
 ## 製作期間
 
