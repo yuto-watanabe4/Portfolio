@@ -11,7 +11,7 @@
 
 サービス名：飲食店の在庫管理システム　
 
-起動URL：http://localhost:8080/login
+起動URL：https://portfolio1-l76f.onrender.com
 
 ログインID：admin_user
 
