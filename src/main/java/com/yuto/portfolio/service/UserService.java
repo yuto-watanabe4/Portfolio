@@ -21,16 +21,14 @@ public class UserService {
 
     //新規ユーザー登録
     public void registerUser(User user) {
-        // 1. ユーザー名の重複チェック
+        //  ユーザー名の重複チェック
         if (userRepository.existsByUsername(user.getUsername())) {
             throw new RuntimeException("このユーザー名は既に存在します。");
         }
 
-        // 2. パスワードをハッシュ化してセット
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
 
-        // 3. デフォルト権限（一般ユーザー）を付与
         if (user.getRole() == null) {
             user.setRole(Role.USER);
         }
