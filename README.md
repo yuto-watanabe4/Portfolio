@@ -12,6 +12,7 @@ URL：https://portfolio1-l76f.onrender.com
 ログインID：admin
 
 ログインパスワード：password123
+
 Spring Bootを用いて開発した在庫管理Webアプリです。
 食材の在庫状況を管理し、仕入れや発注、入出庫履歴の確認を行うことができます。
 
