@@ -18,10 +18,9 @@ URL：https://portfolio1-l76f.onrender.com
 Spring Bootを用いて開発した在庫管理Webアプリです。
 食材の在庫状況を管理し、仕入れや発注、入出庫履歴の確認を行うことができます。
 
-## 製作期間
-2026/3-2026/4の２か月間です
-
-2026/2月に退職し上記期間は平均６～８時間程度取り組みました。
+## なぜこのシステムを作ったか
+飲食店や小売業で必要となる在庫管理業務を効率化するシステムを想定して開発しました。
+在庫管理だけでなく、発注や入出庫履歴まで一貫して管理できる構成にしました。
 
 ## 設計
 ER図：https://www.figma.com/board/52fVjLTGEO5QGQb3V3r5AI/ER%E5%9B%B3?t=tLqc7J8q8gk9IO6a-6
@@ -46,7 +45,7 @@ ER図：https://www.figma.com/board/52fVjLTGEO5QGQb3V3r5AI/ER%E5%9B%B3?t=tLqc7J8
 ・IntelliJ IDEA
 
 #### ビルド
-・Mavin
+・Maven
 
 #### テスト
 ・JUnit
