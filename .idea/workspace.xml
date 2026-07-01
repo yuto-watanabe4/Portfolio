@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80a781ec-bdab-4465-8a01-3c9033f0c17a" name="変更" comment="更新">
+    <list default="true" id="4ddf9ad2-7717-45df-8670-1fae00260536" name="変更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,19 +35,16 @@
   "customColor": "",
   "associatedIndex": 8
 }]]></component>
-  <component name="ProjectId" id="3FqL2HvGioX0DWM05ZnM67HPmyD" />
+  <component name="ProjectId" id="3Fsi9Hnm7LsDBMor8fcNCNlVkaI" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Maven.Inventory-Management-System [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.InventoryApplication.executor": "Run",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -58,6 +54,11 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "to.speed.mode.migration.done": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/新規スクラッチファイル": [
+      "SQL"
+    ]
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -69,41 +70,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="デフォルトタスク">
-      <changelist id="80a781ec-bdab-4465-8a01-3c9033f0c17a" name="変更" comment="" />
-      <created>1782797444754</created>
+      <changelist id="4ddf9ad2-7717-45df-8670-1fae00260536" name="変更" comment="" />
+      <created>1782870025593</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1782797444754</updated>
+      <updated>1782870025593</updated>
     </task>
-    <task id="LOCAL-00001" summary="更新">
-      <option name="closed" value="true" />
-      <created>1782797899883</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1782797899883</updated>
-    </task>
-    <task id="LOCAL-00002" summary="更新">
-      <option name="closed" value="true" />
-      <created>1782801661300</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1782801661300</updated>
-    </task>
-    <task id="LOCAL-00003" summary="更新">
-      <option name="closed" value="true" />
-      <created>1782803597998</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1782803597998</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
   </component>
 </project>
