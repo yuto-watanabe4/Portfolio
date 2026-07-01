@@ -73,7 +73,7 @@ ER図：https://www.figma.com/board/52fVjLTGEO5QGQb3V3r5AI/ER%E5%9B%B3?t=tLqc7J8
 ## 工夫したこと
 ・Entity / Repository / Service / Controller の責務分離を意識して実装しました。
 
-・保守性・可読性を意識し、レイヤードアーキテクチャで構成しました。
+・保守性・可読性を意識し、MVCで構成しました。
 
 ・データベース設計では正規化を意識してテーブルを分割し、ER図を作成して設計しました。
 ## 苦労したこと
