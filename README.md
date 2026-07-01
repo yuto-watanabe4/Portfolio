@@ -23,6 +23,11 @@ Spring Bootを用いて開発した在庫管理Webアプリです。
 
 2026/2月に退職し上記期間は平均６～８時間程度取り組みました。
 
+##設計
+ER図：https://www.figma.com/board/52fVjLTGEO5QGQb3V3r5AI/ER%E5%9B%B3?t=tLqc7J8q8gk9IO6a-6
+
+画面遷移図：https://www.figma.com/board/ZKmMEhfDKGrDg8Ac03bp00/%E5%9C%A8%E5%BA%AB%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?t=tLqc7J8q8gk9IO6a-1
+
 ## 使用技術
 
 #### フロントエンド
