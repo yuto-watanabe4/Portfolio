@@ -24,25 +24,29 @@ Spring Bootを用いて開発した在庫管理Webアプリです。
 ・thymeleaf
 
 #### バックエンド
-Java17(Spring Boot)
+・Java17
+
+・Spring Boot
 
 #### 開発環境
-Intellij Idea
+・IntelliJ IDEA
 
 #### ビルド
-Mavin
+・Mavin
 
 #### テスト
-Junit/SpringBootTest
+・JUnit
+
+・SpringBootTest
 
 #### DB
-PostgleSQL
+・PostgreSQL
 
 #### コンテナ
-Docker
+・Docker
 
 #### デプロイ
-Render
+・Render
 
 ## 実装機能
 - ログイン認証
@@ -50,14 +54,20 @@ Render
 - 仕入先管理
 - 発注（発注勧告/通常発注)
 - 入出庫履歴
-- 食材の登録・編集・削除
+- 食材の登録・編集・削除（CRUD）
 
 ## 制作の感想
 ## 工夫したこと
-Entity/Repository/Service/Controllerの責務分離を意識して実装しました。
-DBを正規化を意識してテーブルを分離しER図を作成しました。
+・Entity / Repository / Service / Controller の責務分離を意識して実装しました。
+
+・保守性・可読性を意識し、レイヤードアーキテクチャで構成しました。
+
+・データベース設計では正規化を意識してテーブルを分割し、ER図を作成して設計しました。
 ## 苦労したこと
-dockerでコンテナ化しRenderでデプロイするとき環境差異によるDB接続エラーの解消に時間を使いました。
+Docker でコンテナ化し、Render へデプロイする際に、ローカル環境と本番環境の差異によるDB接続エラーの解消に苦労しました。
+
+ログを確認しながら原因を切り分け、環境変数や接続設定を一つずつ見直すことで解決しました。
+この経験を通して、実装だけでなくインフラやデプロイ周りの重要性も学ぶことができました。
 
 ## おわりに
 
