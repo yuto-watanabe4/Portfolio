@@ -19,7 +19,7 @@ public class DataLoader implements CommandLineRunner {
         if (!userRepository.existsByUsername("admin")) {
             User admin = new User();
 
-            // エンティティのフィールドに合わせてセット
+            // エンティティのフィールドに合わせてセットする
             admin.setRole(Role.ADMIN);
             admin.setUsername("admin");
             admin.setPassword("password123");
