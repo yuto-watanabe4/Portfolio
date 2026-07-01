@@ -17,7 +17,9 @@ Spring Bootを用いて開発した在庫管理Webアプリです。
 ## 使用技術
 
 #### フロントエンド
-・HTML  
+・HTML
+
+
 ・CSS
 ・thymeleaf
 
