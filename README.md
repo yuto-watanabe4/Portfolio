@@ -29,7 +29,7 @@ Intellij Idea
 Mavin
 
 #### テスト
-Junit SpringBootTest
+Junit/SpringBootTest
 
 #### DB
 PostgleSQL
